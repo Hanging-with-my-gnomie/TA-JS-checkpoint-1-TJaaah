@@ -3,18 +3,24 @@
 2. What will be the output of the code below
 
 ```js
-let i = 0;
-while (i < 10) {
-  return (i++)/10  ;
-  i++;
+const number = +prompt("Enter a number");
+
+let sum = 0 , i =1;
+while (i <= number) {
+  sum += i;
+  
 }
+console.log(`The sum of natural number.`);
 ```
 
 3. Write a function named `getEvenSum` that accepts a parameter `max`. Return the sum of all even numbers. The value of max should default to 10.
-  fuction getEvenSum(max=10){
-     for(let i=0; i<10; i%2===0)
-     return i++;
-  }
+  function getEvenSum(max=10){
+    let sum = 0;
+    for(let i=1; i<max; i%2 === 0){
+        sum+=i;
+    }
+   return sum;
+ }
 4. Write a function named `getOddSum` that accepts a parameter `max`. Return the sum of all odd numbers. The value of max should default to 10.
   fuction getOddSum(max=10){
      for(let i=0; i<10; i%2 !==0)
@@ -22,7 +28,10 @@ while (i < 10) {
   }
 5. Write a function named `getProductOfDigits` that accepts a parameter `num`. It returns the product of all the digits in the number.
 fuction getProductOfDigits(num){
-      return num*num;
+      return num*num*num;
+      if(num<0>){
+        return "not a valid input";
+      }
   }
 - If the input value is less than 0 return `not a valid input`
 - For example if the input is `123` output should be `6`.
@@ -76,6 +85,6 @@ getOutput(); // Who are you
 ```
 
 9. Can a function have multiple return statement? Give one example if possible and explain the reason.
-  yes 
+  yes, A function can have a multiple return statements but only one of them will be executed because once a return staetements is excuted , the program controls moves back to the caller function skipping the remaining statements of the current function.
 10. What is the difference between `for` loop and `while` loop. What are the different place you can use them? Explain with example.
-for use condition in single line in wghhg.
+the difference between for loop and while loop is that in for loop the number of iterations to be done is already known and is used to obtain a certain result whereas in while loop the commands runs until a certain condition is reached and the statements is proved to be false.
